@@ -12,13 +12,13 @@ aws_region = "us-east-2"
 bucket = "f1-75"
 
 # Create S3 client
+
 s3 = boto3.client(
     "s3",
-    aws_access_key_id=aws_access_key_id,
-    aws_secret_access_key=aws_secret_access_key,
-    region_name=aws_region
+    aws_access_key_id=st.secrets["aws_access_key_id"],
+    aws_secret_access_key=st.secrets["aws_secret_access_key"],
+    region_name=st.secrets["aws_region"]
 )
-
 # --------- Step 1: Load Data from S3 ---------
 @st.cache_data
 def load_all_data():
