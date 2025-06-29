@@ -9,7 +9,7 @@ import os
 aws_access_key_id = os.getenv("AWS_ACCESS_KEY_ID")
 aws_secret_access_key = os.getenv("AWS_SECRET_ACCESS_KEY")
 aws_region = "us-east-2"
-bucket = "f1-75"
+s3_bucket = "f1-75"
 
 # Create S3 client
 
